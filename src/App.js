@@ -16,10 +16,9 @@ function App() {
     setData(response.data);
   };
 
-  const placeholder = 'Search for pet';
   return (
     <div className="App">
-      <Landing placeholder={placeholder} data={data} />
+      <Landing data={data} />
     </div>
   );
 }

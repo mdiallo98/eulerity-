@@ -8,6 +8,7 @@ function SearchBar({ data }) {
     let result = data.filter((value) => {
       return value.title.tolowerCase.includes(search.tolowerCase());
     });
+    setFilteredData(result);
   };
   return (
     <div style={{ marginTop: '15px' }}>
