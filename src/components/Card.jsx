@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 function Card({ data }) {
   return (
     <div className="col-lg-3 col-md-3 col-2 my-4">
@@ -8,7 +8,7 @@ function Card({ data }) {
           className="card-img-top"
           src={data.url}
           onError={({ currentTarget }) => {
-            currentTarget.onerror = null; // prevents looping
+            currentTarget.onerror = null;
             currentTarget.src =
               'https://motivatevalmorgan.com/wp-content/uploads/2016/06/default-movie-1-1-816x576.jpg';
           }}
@@ -16,9 +16,7 @@ function Card({ data }) {
         <div className="card-body">
           <h5 className="card-title">{data.title}</h5>
 
-          {/* <Link to={detailUrl} className="btn btn-danger">
-                Show details
-              </Link> */}
+          {/* <Link className="btn btn-danger">Show details</Link> */}
         </div>
       </div>
     </div>

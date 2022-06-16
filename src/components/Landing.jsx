@@ -1,16 +1,14 @@
 import React from 'react';
 import Card from './Card';
-import SearchBar from './SearchBar';
+
 import { useState } from 'react';
 function Landing({ data }) {
   const [filteredData, setFilteredData] = useState([]);
-  // console.log(data);
 
   const handleChange = (event) => {
     let search = event.target.value;
 
     let result = data.filter((value) => {
-      console.log(value.title);
       return value.title.toLowerCase().includes(search.toLowerCase());
     });
 
