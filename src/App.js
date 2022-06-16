@@ -1,8 +1,7 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
-import SearchBar from './components/SearchBar';
 import axios from 'axios';
+import Landing from './components/Landing';
 function App() {
   const url = 'http://eulerity-hackathon.appspot.com/pets';
   const [data, setData] = useState([]);
@@ -20,7 +19,7 @@ function App() {
   const placeholder = 'Search for pet';
   return (
     <div className="App">
-      <SearchBar placeholder={placeholder} data={data} />
+      <Landing placeholder={placeholder} data={data} />
     </div>
   );
 }
