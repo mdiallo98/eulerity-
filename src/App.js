@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Landing data={data} />} />
-        <Route path="/movies/:id" element={<CardView data={data} />} />
+        <Route path="/pet/:id" element={<CardView data={data} />} />
       </Routes>
     </div>
   );
