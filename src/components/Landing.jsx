@@ -8,8 +8,7 @@ function Landing({ data }) {
 
   const handleChange = (event) => {
     let search = event.target.value;
-    // console.log(search);
-    // console.log(data + '---------');
+
     let result = data.filter((value) => {
       console.log(value.title);
       return value.title.toLowerCase().includes(search.toLowerCase());
@@ -17,7 +16,7 @@ function Landing({ data }) {
 
     setFilteredData(result);
   };
-  console.log(filteredData);
+
   const defaultData = data.map((value) => {
     return <Card data={value} />;
   });
@@ -27,14 +26,10 @@ function Landing({ data }) {
   });
   return (
     <div>
-      {/* <>
-        <SearchBar data={data} />
-      </> */}
       <div style={{ marginTop: '15px' }}>
         <input type="text" onChange={handleChange} />
       </div>
       <div className="container">
-        {/* {filteredData} */}
         <div className="row">{filteredData ? SearchData : defaultData} </div>
       </div>
     </div>
