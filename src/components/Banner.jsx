@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 function Banner({ text }) {
   const bannerStyle = {
     height: '500px',
@@ -13,6 +13,7 @@ function Banner({ text }) {
       <h1 className="hero-text" style={{ fontFamily: 'cursive' }}>
         {text}
       </h1>
+      <Link to="/about">about</Link>
     </header>
   );
 }
