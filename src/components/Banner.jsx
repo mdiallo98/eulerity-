@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Banner() {
+function Banner({ text }) {
   const bannerStyle = {
     height: '500px',
     backgroundColor: 'aqua',
@@ -11,7 +11,7 @@ function Banner() {
       className=" text-danger p-5 hero-container"
     >
       <h1 className="hero-text" style={{ fontFamily: 'cursive' }}>
-        Eulerity Pet Gallery
+        {text}
       </h1>
     </header>
   );
